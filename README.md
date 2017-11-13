@@ -1,4 +1,4 @@
-# joi-browser-test
+# joi-browser-test [![Build Status](https://travis-ci.org/nelsonic/joi-browser-test.svg?branch=master)](https://travis-ci.org/nelsonic/joi-browser-test)
 
 Comparison of `joi-browser` and "_standard_" `joi` for validating a schema. <br />
 (_investigation into a potential bug with `joi-browser`..._)
@@ -43,7 +43,7 @@ const result_undefined_value = Joi.validate(value_undefined, schema);
 console.log(result_undefined_value); // { error: null, value: undefined, then: [Function: then], catch: [Function: catch] }
 ```
 
-
+Sample output: https://travis-ci.org/nelsonic/joi-browser-test/builds/301663402#L550-L559
 
 
 ## How?
@@ -79,3 +79,6 @@ If the data being validated by Joi (_or Joi Browser_) is `undefined`,
 then no error will be thrown!!
 
 So, check for `undefined` `before` you attempt to validate using Joi!!
+
+Asked this question on: https://github.com/hapijs/joi/issues/1358
+(_hoping for a reply from the knowledgable_)
