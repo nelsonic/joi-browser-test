@@ -55,6 +55,8 @@ assert.equal(typeof undefined_data, 'undefined');
 const joi_result_undefined = Joi.validate(undefined_data, joi_schema);
 const joi_browser_result_undefined = JoiB.validate(undefined_data, joi_browser_schema);
 
+console.log(' - - - - - - - - - - - - - - - - - - - - - - - - undefined_data:');
+console.log(undefined_data, `typeof undefined_data:`, typeof undefined_data)
 console.log(' - - - - - - - - - - - - - - - - - - joi_result (undefined data):');
 console.log(joi_result_undefined);
 console.log(' - - - - - - - - - - - - - - joi_browser_result (undefined data):');

@@ -6,6 +6,9 @@
     "joi": "^13.0.2",
     "joi-browser": "^13.0.1"
   },
+  "scripts": {
+    "test": "node test.js"
+  },
   "homepage": "https://github.com/nelsonic/joi-browser-test",
   "repository": "git://github.com/nelsonic/joi-browser-test",
   "license": "BSD-3-Clause"
