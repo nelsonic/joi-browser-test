@@ -19,6 +19,33 @@ so that I can post the question in `public`.
 
 Micro-comparison of `joi-browser` with "_standard_" `joi`.
 
+### Hypothesis
+
+If we give Joi an `undefined` value to validate it does _not_ return an error.
+
+e.g:
+
+```js
+const schema = {
+    a: Joi.number().required
+};
+
+const value = {
+    a: '123'
+};
+
+const result = Joi.validate(value, schema);
+console.log(result); // { error: null, value: { a: 123 }, then: [Function: then], catch: [Function: catch] }
+
+// now try with value undefined:
+let value_undefined;
+const result_undefined_value = Joi.validate(value_undefined, schema);
+console.log(result_undefined_value); // { error: null, value: undefined, then: [Function: then], catch: [Function: catch] }
+```
+
+
+
+
 ## How?
 
 ### 1. Clone the Repo

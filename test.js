@@ -62,3 +62,21 @@ console.log(joi_result_undefined);
 console.log(' - - - - - - - - - - - - - - joi_browser_result (undefined data):');
 console.log(joi_browser_result_undefined);
 console.log(' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ');
+
+
+const schema = {
+    a: Joi.number().required( )
+};
+
+const value = {
+    a: '123'
+};
+
+const result = Joi.validate(value, schema);
+console.log(' - - - - - - - - - - - - - - result (valid):');
+console.log(result);
+
+let value_undefined;
+const result_undefined_value = Joi.validate(value_undefined, schema);
+console.log(' - - - - - - result (when value being validated is undefined):');
+console.log(result_undefined_value);
