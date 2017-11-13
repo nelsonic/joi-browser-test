@@ -35,8 +35,10 @@ console.log('joi-browser:', joi_browser_result);
 assert.deepEqual(joi_result.error, joi_browser_result.error);
 assert.deepEqual(joi_result.value, joi_browser_result.value)
 
-let invalid_data; // undefined
-assert.equal(typeof invalid_data, 'undefined');
+const invalid_data = {
+  uuid: '5fbc93a9-d566-4c64-b057-2a5b7ac8d39b',
+  status: 'INVALID'
+}
 
 const joi_result_invalid = Joi.validate(invalid_data, joi_schema);
 const joi_browser_result_invalid = JoiB.validate(invalid_data, joi_browser_schema);
@@ -45,4 +47,16 @@ console.log(' - - - - - - - - - - - - - - - - - - joi_result (invalid data):');
 console.log(joi_result_invalid);
 console.log(' - - - - - - - - - - - - - - joi_browser_result (invalid data):');
 console.log(joi_browser_result_invalid);
+console.log(' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ');
+
+let undefined_data; // undefined
+assert.equal(typeof undefined_data, 'undefined');
+
+const joi_result_undefined = Joi.validate(undefined_data, joi_schema);
+const joi_browser_result_undefined = JoiB.validate(undefined_data, joi_browser_schema);
+
+console.log(' - - - - - - - - - - - - - - - - - - joi_result (undefined data):');
+console.log(joi_result_undefined);
+console.log(' - - - - - - - - - - - - - - joi_browser_result (undefined data):');
+console.log(joi_browser_result_undefined);
 console.log(' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ');
